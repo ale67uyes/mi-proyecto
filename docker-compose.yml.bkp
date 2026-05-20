@@ -1,12 +1,15 @@
+version: '3.8'
+
 services:
 
   postgres:
-    image: postgres:16
+    image: postgres:15
     environment:
       POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin
-      POSTGRES_DB: appdb
-
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: mydb
+    ports:
+      - "5432:5432"
   wildfly:
     build: .
     ports:

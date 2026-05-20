@@ -1,2 +1,3 @@
-FROM quay.io/wildfly/wildfly:latest
-COPY target/app.war /opt/jboss/wildfly/standalone/deployments/
+FROM quay.io/wildfly/wildfly
+
+COPY target/miapp-1.0.war /opt/jboss/wildfly/standalone/deployments/miapp.war
